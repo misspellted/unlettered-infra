@@ -1,9 +1,13 @@
+# ================
+# Infrastructure
+# ----------------
+
 # Local .terraform directories
-**/.terraform/*
+.terraform/
 
 # .tfstate files
-*.tfstate
-*.tfstate.*
+.tfstate
+.tfstate.*
 
 # Crash log files
 crash.log
@@ -25,5 +29,36 @@ override.tf.json
 #
 # !example_override.tf
 
-# Include tfplan files to ignore the plan output of command: terraform plan -out=tfplan
-# example: *tfplan*
+# Automated variables file (usually CI/CD-built).
+# Ignored for use in local testing. Should be generated as needed by the CI/CD system.
+terraform.auto.tfvars.json
+
+# Ignore any local generated plans... because that's something to be added to the repo..
+# Right?
+*tfplan*
+
+# ----------------
+# End of Infrastructure
+# ================
+
+# ================
+# Python
+# ----------------
+
+# Virtual development environment
+.dev/
+
+# ----------------
+# End of Python
+# ================
+
+# ================
+# Development Tools
+# ----------------
+
+# Visual Studio Code directory
+.vsc/
+
+# ----------------
+# End of Development Tools
+# ================
